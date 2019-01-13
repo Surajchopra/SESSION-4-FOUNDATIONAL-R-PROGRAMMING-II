@@ -1,0 +1,51 @@
+﻿Data Analytics 
+SESSION 4: FOUNDATIONAL R PROGRAMMING-II 
+Assignment 3 
+
+1. states=rownames(USArrests) 
+• Get states names with ‘w’. 
+• Get states names with ‘W’. 
+
+Answer:
+states <- rownames(USArrests)
+states
+
+Output: 
+ [1] "Alabama"        "Alaska"         "Arizona"        "Arkansas"       "California"    
+ [6] "Colorado"       "Connecticut"    "Delaware"       "Florida"        "Georgia"       
+[11] "Hawaii"         "Idaho"          "Illinois"       "Indiana"        "Iowa"          
+[16] "Kansas"         "Kentucky"       "Louisiana"      "Maine"          "Maryland"      
+[21] "Massachusetts"  "Michigan"       "Minnesota"      "Mississippi"    "Missouri"      
+[26] "Montana"        "Nebraska"       "Nevada"         "New Hampshire"  "New Jersey"    
+[31] "New Mexico"     "New York"       "North Carolina" "North Dakota"   "Ohio"          
+[36] "Oklahoma"       "Oregon"         "Pennsylvania"   "Rhode Island"   "South Carolina"
+[41] "South Dakota"   "Tennessee"      "Texas"          "Utah"           "Vermont"       
+[46] "Virginia"       "Washington"     "West Virginia"  "Wisconsin"      "Wyoming"   
+
+• Get states names with ‘w’. 
+
+grep(pattern = "W", x= states, Value = TRUE)
+
+OutPut:
+[1] "Washington"    "West Virginia" "Wisconsin"     "Wyoming" 
+
+
+• Get states names with ‘W’. 
+
+grep(pattern = "w", x= states, Value = TRUE)
+
+Output: 
+[1] "Delaware"      "Hawaii"        "Iowa"          "New Hampshire" "New Jersey"    "New Mexico"   
+[7] "New York"
+
+
+
+2. Prepare a histogram of the number of characters in each US state. 
+
+Answer:
+
+states <- rownames(USArrests)
+states
+hist(nchar(states), main = "Histogram", xlab = "Number of Character in each US States") 
+
+

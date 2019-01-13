@@ -1,0 +1,42 @@
+﻿Data Analytics 
+SESSION 4: FOUNDATIONAL R PROGRAMMING-II 
+Assignment 2 
+
+
+1. x <- c('data.science.in.R','machine.learning.in.R') 
+Perform the below string operation: 
+• Replace the period character "." within each string with another character 
+i.e. "-" minus sign. 
+
+Answer:
+x <- c('data.science.in.R','machine.learning.in.R') 
+x
+
+sub("[.]", "-", x)		# replace the first occurrence of the pattern
+
+Output: [1] "data-science.in.R"     "machine-learning.in.R"
+
+gsub("[.]","-",x)		# replace all the occurrence of the pattern
+
+Output:
+[1] "data-science-in-R"     "machine-learning-in-R"
+
+
+2. x <- c('data.science.in.R','machine.learning.in.R') 
+Perform the below String operation: 
+• Append again with "-" minus sign character at the start of each string and finally concatenate all the string within the vector to form a final single string and assigning it to some object 
+
+Answer:
+
+x <- c('data.science.in.R','machine.learning.in.R') 
+x							# Output: [1] "data.science.in.R"     "machine.learning.in.R"
+
+x1 <- paste("-",x)
+x1						# Output: [1] "- data.science.in.R"     "- machine.learning.in.R"
+
+x2 <- paste0(x1[1], x1[2])		# Output: [1] "- data.science.in.R- machine.learning.in.R"
+
+
+
+
+
